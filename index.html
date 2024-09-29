@@ -17,10 +17,16 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        img {
+        img.fotodeperfil {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+        }
+
+        img {
+            border-radius: auto;
+            width: auto;
+            height: auto;
         }
         
         nav {
@@ -58,18 +64,19 @@
     <nav>
         <a href="#home">Inicio</a>
         <a href="#bio">Biografía</a>
-        <a href="#blog">Blog</a>
+        <a href="#blog">Hardware</a>
+        <a href="#Git">Tutorial de Git</a>
     </nav>
 
     <header id="home">
         <h1>Bienvenidos a mi Blog Personal, mi nombre es Diana y los quiero invitar a conocer un poco sobre lo que me apasiona.</h1>
-        <img src="imagenes\perfil.png" alt="Foto de perfil">
+        <img src="imagenes\perfil.png" alt="Foto de perfil" class="fotodeperfil">
         <h2 id="bio">Un poco sobre mi:</h2>
         <p>Mi nombre es Diana Lucia Escobar Duque, soy tecnologa en sistemas y llevo mas de 5 años trabajando en este campo. Me gusta mucho aprender cosas nuevas, me gusta conocer nuevos lugares y viajar. Soy de Bello Antioquia pero vivo en Itagui, no tengo hijos pero tengo una perrita.</p>
     </header>
 
     <section id="blog">
-        <h2>Mi Blog</h2>
+        <h2>Hardware</h2>
         
         <article>
             <h3>Conozcamos un poco sobre el Hardware</h3>
@@ -97,6 +104,101 @@
             <p>Enciclopedia significados (https://www.significados.com/hardware/)</p>
         </article>
 
+        <section id="Git">
+            <h2>Tutorial de Git</h2>
+            <img src="imagenes\Git ref.png" alt="Imagen Git">
+        <article>
+            <h3>¿Que es Git?</h3>
+            <p>Git es un sistema de control de versiones distribuido que permite a los desarrolladores gestionar y realizar un seguimiento de los cambios en el código fuente a lo largo del tiempo.</p>
+                <p>Facilita la colaboración entre múltiples personas en un proyecto y permite revertir a versiones anteriores si es necesario.</p>
+                <h3>Para crear un nuevo repositorio:</h3>
+                <p>- Navega a la carpeta donde deseas crear el repositorio y ejecuta: git init</p> 
+                <img src="imagenes\init.png" alt="comando init">
+                <p>- Se crean directorios con mkdir "nombredelacarpeta"</p>
+                <img src="imagenes\mkdir.png" alt="comando mkdir">
+                <P>- Se crean los archivos con el comando touch</p>
+                <img src="imagenes\touch.png" alt="comando touch">
+                <p>- Para agregar archivos al repositorio git add "nombredelarchivo"</p>
+                <img src="imagenes\git add.png" alt="comando git add">
+                <p>- O para agregar todos los archivos de la carpeta: git add .</p>
+                <img src="imagenes\git add todos los archivos.png" alt="comando git add .">
+                <p>- Para guardar los cambios realizados: git commit -m seguido de un mensaje que describa los cambios</p>
+                <img src="imagenes\commit -m.png" alt="comando git commit -m">
+                <p>- Para ver qué cambios se han realizado: git status</p>
+                <img src="imagenes\git status.png" alt="comando status">
+                <p>- Para revisar el historial de commits: git log</p>
+                <img src="imagenes\git log.png" alt="comando log">
+        <article>   
+        
+        <article>
+            <h3>Crear y trabajar con ramas o branches:</h3>
+                <p>Las ramas (o branches) en Git son una característica fundamental que permite a los desarrolladores trabajar en diferentes versiones de un proyecto al mismo tiempo. Cada rama es esencialmente una línea independiente de desarrollo en el mismo repositorio, lo que facilita la implementación de nuevas características, la corrección de errores o la experimentación sin afectar la rama principal (usualmente llamada main o master).
+                    Las ramas son una herramienta poderosa que te ayuda a organizar y gestionar tu trabajo en Git, facilitando la colaboración y el desarrollo ágil.</p>
+                <h3>¿Para qué se utilizan los branches?</h3>
+                <p>1.Desarrollo paralelo: Permiten que varios desarrolladores trabajen en diferentes características al mismo tiempo sin interferir entre sí.</p>
+                <p>2.Experimentación: Puedes probar nuevas ideas o enfoques en una rama separada sin afectar el código estable.</p>
+                <p>3.Mantenimiento: Facilitan la corrección de errores en una versión específica del código sin interrumpir el desarrollo de nuevas funciones.</p>
+                <p>4.	Integración: Una vez que una funcionalidad ha sido completada y probada en una rama, puedes fusionarla de nuevo en la rama principal.</p>
+                <h3>¿Como crear los branches?</h3>
+                <p>- Para crear una nueva rama: git branch nombredelarama</p>
+                <img src="imagenes\branch.png" alt="comando branch">
+                <p>- Para cambiar a una rama: git checkout nombredelarama</p>
+                <img src="imagenes\checkout branch.png" alt="comando checkout branch">
+                <p>- Para crear una nueva e ingresar a ella: git checkout -b nombredelarama</p>
+                <img src="imagenes\checkout branch -b.png" alt="comando git checkout -b">
+                <p>- Cambia a la rama principal (usualmente 'main' o 'master'): git checkout master</p>
+                <img src="imagenes\checkout branch master.png" alt="comando git checkout master">
+                <p>* Comando merge: El comando merge en Git se utiliza para combinar dos ramas diferentes en una sola. Este comando permite integrar los cambios realizados en una rama (por ejemplo, una rama de características) a otra rama (generalmente la rama principal, como main o master).</p>
+                <p>- Fusiona la rama deseada con el comando merge: git merge nombredelarama</p>
+                <img src="imagenes\merge.png" alt="comando git merge">
+                <p>- Listar todas las ramas: git branch</p>
+                <img src="imagenes\git branch listar.png" alt="comando branch">
+                <p>- Eliminar una rama: git branch -d nombredelarama</p>
+                <img src="imagenes\git branch eliminar.png" alt="comando git branch -d">
+                <h3>Consejos para usar branches:</h3>
+                <p>• Nombres descriptivos: Usa nombres que describan la funcionalidad o el propósito de la rama (por ejemplo, feature/login, bugfix/navbar).</p>
+                <p>• Mantén la rama principal limpia: Fusiona cambios solo cuando estén completamente probados y listos.</p>
+                <p>• Usa ramas para cada tarea: Crea una nueva rama para cada nueva funcionalidad o corrección de errores.</p>
+        </article>
+
+        <article>
+            <h3>Agregar un repositorio remoto a GitHub:</h3>
+            <p>Pasos para conectar tu repositorio local a GitHub</p>
+            <h3>Crear un repositorio en GitHub:</h3>
+            <p>- Inicia sesión en tu cuenta de GitHub.</p>
+            <p>- Haz clic en el botón "New" para crear un nuevo repositorio.</p>
+            <img src="imagenes\new repository.png" alt="repositorio GitHub">
+            <p>- Asigna un nombre a tu repositorio, elige si será público o privado y haz clic en “Create repository"</p>
+            <img src="imagenes\establecer nombre al new repository.png" alt="crear repositorio GitHub">
+            <p>- Obtener la URL del repositorio: </p>
+            <img src="imagenes\URL repository.png" alt="URL repositorio GitHub">
+            <p>   - Una vez creado el repositorio, GitHub te proporcionará una URL. Puedes elegir entre HTTPS o SSH. La URL se verá algo así:</p>
+            <p>HTTPS: https://github.com/dianaed08/tutorial-Git.git</p>
+            <p>SSH: git@github.com:dianaed08/tutorial-Git.git</p>
+            <p>- Ahora en Git debes abrir tu terminal:</p>
+            <p> - Navega hasta el directorio de tu repositorio local. Usa el comando: 'cd'</p>
+            <img src="imagenes\ingresar al directorio.png" alt="comando cd">
+            <p>- Agregar el repositorio remoto:</p>
+            <p>Usa el siguiente comando para agregar el repositorio remoto. Reemplaza 'nombre-remoto' (origin) y la URL de GitHub:</p>
+            <p>git remote add nombre-remoto URL GitHub</p>
+            <img src="imagenes\add repositorio remoto.png" alt="comando remote add">
+            <p>- Verificar que el repositorio remoto se ha agregado correctamente:</p>
+            <p>Para asegurarte de que el repositorio remoto se ha configurado correctamente, puedes usar el comando git remote -v, esto debería mostrarte las URLs del repositorio remoto para 'fetch' y 'push'.</p>
+            <img src="imagenes\remote -v.png" alt="comando remote -v">
+            <p>- Si se equivocan como yo, pueden eliminarlos con el comando: git remote remove nombre-remoto</p>
+            <img src="imagenes\git remove r remoto.png" alt="Comando eliminar repositorio remoto">
+            <p>- Para subir tus cambios al repositorio remoto usa el siguiente comando para hacer un push:</p>
+            <p>git push -u origin master</p>
+            <p>Si la rama principal se llama main se debe cambiar el master por main.</p>
+            <img src="imagenes\git push.png" alt="comando push">
+            <p>La primera vez va a solicitar iniciar sesión en el navegador, debes darle los permisos y ahí si carga los cambios</p>
+            <p>Con estos pasos, tu repositorio local estará conectado al remoto en GitHub. ¡Ahora puedes colaborar y compartir tu código fácilmente!</p>
+            <img src="imagenes\github visualizacion.png" alt="Visualizar repositorio GitHub">
+            <p>Recursos adicionales
+                - Documentación oficial de Git: [git-scm.com/doc](https://git-scm.com/doc)
+                </p>
+            
+        </article>
     </section>
 </body>
 </html>
